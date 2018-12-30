@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.jlcindia.hibernate.Student" table="emp02">
+	<id name="id">
+	 <generator class="assigned"></generator>  
+	</id>
+	
+	<property name="sname" />
+	
+	<set name="phone" table="Ephone">
+	<key column="phoneId"></key>
+	<element column="phone" type="string"></element>
+	</set>
+
+
+</class>
+
+
+</hibernate-mapping>
